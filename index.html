@@ -1,7 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"><title>Contacts App</title></head>
+<head>
+  <meta charset="UTF-8">
+  <title>Contacts App</title>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js"></script>
+</head>
 <body>
-  <h1>Hello GitHub Pages!</h1>
+  <h1>Firebase Test</h1>
+  <p id="status">Connecting…</p>
+
+  <script>
+    // Paste your config here ↓
+  // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBWofJqBahz1Gi8ApXKFXJYQitaq7hVQZY",
+  authDomain: "contacts-app-aabd0.firebaseapp.com",
+  projectId: "contacts-app-aabd0",
+  storageBucket: "contacts-app-aabd0.firebasestorage.app",
+  messagingSenderId: "683740440785",
+  appId: "1:683740440785:web:3060882389ea596a3cfdf0"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Simple test: list Firestore databases
+    const db = firebase.firestore();
+    document.getElementById('status').textContent =
+      'Firebase initialized successfully!';
+  </script>
 </body>
 </html>
